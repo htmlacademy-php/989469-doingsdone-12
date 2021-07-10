@@ -1,7 +1,7 @@
 # Личный проект «Дела в Порядке»
 
 * Студент: [Елена Войтович](https://up.htmlacademy.ru/php/12/user/989469).
-* Наставник: [Артём Ильин](https://up.htmlacademy.ru/php/12/user/141112).
+* Наставник: [Анна Смоленцева](https://up.htmlacademy.ru/php/12/user/1402027).
 
 ---
 
