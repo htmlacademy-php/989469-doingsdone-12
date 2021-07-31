@@ -40,7 +40,19 @@ $tasks = [
         'category' => 'Домашние дела',
         'done' => 'false',
     ]
-]
+];
+
+function get_number_of_tasks(array $tasks_array, $category) {
+    $count = 0;
+
+    foreach($tasks_array as $value) {
+        if ($value['category'] === $category) {
+			$count++;
+		}
+    }
+
+	return $count;
+}
 
 ?>
 <!DOCTYPE html>
@@ -83,10 +95,10 @@ $tasks = [
 
                 <nav class="main-navigation">
                     <ul class="main-navigation__list">
-                        <?php foreach ($projects as $val): ?>
+                        <?php foreach ($projects as $project): ?>
                         <li class="main-navigation__list-item">
-                            <a class="main-navigation__list-item-link" href="#"><?= $val; ?></a>
-                            <span class="main-navigation__list-item-count">0</span>
+                            <a class="main-navigation__list-item-link" href="#"><?= $project; ?></a>
+                            <span class="main-navigation__list-item-count"><?= get_number_of_tasks($tasks, $project) ?></span>
                         </li>
                         <?php endforeach; ?>
                     </ul>
@@ -131,8 +143,8 @@ $tasks = [
                         </td>
 
                         <td class="task__date"><?= $task['complete_date']; ?></td>
-                            <td class="task__controls">
-                        </td>
+
+                        <td class="task__controls"></td>
 
                         <td class="task__date"></td>
                     </tr>
